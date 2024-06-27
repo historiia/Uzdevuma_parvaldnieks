@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Signika Negative', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f3f3f3;
+    padding: 10px;
+}
+
+.todo-app{
+    max-height: 475px;
+    width: 100%;
+    max-width: 540px;
+    background-color: #b8d070;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 100px auto 20px;
+    padding: 13px 10px;
+    overflow: hidden; 
+}
+
+.todo-app:hover {
+    overflow-y: auto; 
+}
+
+/*Top section*/
+.top-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.fa-pen-to-square {
+    font-size: 1.2rem;
+    margin: 0.5rem;
+    margin-left: 2rem;
+}
+
+/*Add container*/
+.add-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #dfecb6;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px 0 8px 0;
+}
+
+#input-box {
+    flex: 1;
+    padding: 5px;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+#add-button {
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #b8d070;
+}
+
+#add-button:hover {
+    box-shadow: 0.1rem 0.1rem 0.3rem 0.3rem #b8d070;
+    transition: 0.2s ease-in;
+}
+
+/*List section*/
+ul {
+    max-height: 300px; 
+    overflow-y: auto; 
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    display: flex;
+    align-items: center;
+    position: relative;
+    list-style: none;
+    font-size: 18px;
+    padding: 12px 8px;
+    padding-right: 50px;
+    user-select: none;
+    cursor: pointer;
+    word-wrap: break-word; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+
+.fa-check {
+    text-align: center;
+    padding: 5px;
+    cursor: pointer;
+    margin-right: 15px;
+    font-size: 20px;
+    color: #dfecb6;
+    border-radius: 50%;
+    height: 28px;
+    width: 28px;
+    background-color: #dfecb6;
+}
+
+ul li.checked {
+    color: #7c7c7c;
+}
+
+ul li.checked .fa-check {
+    color: #121212;
+    text-decoration: none;
+}
+
+ul li span {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover {
+    cursor: pointer;
+    background-color: #c4d68c;
+}
+
+@media screen and (max-width: 346px) {
+    .fa-pen-to-square {
+        font-size: 2.4rem;
+        margin-left: 1rem;
+    }
+}
